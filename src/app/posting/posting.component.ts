@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/services/model/post.model';
 
 @Component({
   selector: 'app-posting',
@@ -7,12 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostingComponent implements OnInit {
 
-  @Input() posts = [];
+  storedPosts: Post[] = [];
 
   constructor() { }
 
   onPostAdded(post) {
-    this.posts.push(post);
+    this.storedPosts.push(post);
   }
 
   ngOnInit() {

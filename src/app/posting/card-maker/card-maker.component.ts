@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Post } from 'src/app/services/model/post.model';
 
 @Component({
   selector: 'app-card-maker',
@@ -15,7 +16,7 @@ export class CardMakerComponent implements OnInit {
   constructor() { }
 
   addPost() {
-    const post = {
+    const post: Post = {
       title: this.enteredTitle,
       content: this.enteredText
     };
