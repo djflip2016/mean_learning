@@ -1,2 +1,4 @@
-<app-card-maker (postCreated)="onPostAdded($event)"></app-card-maker>
-<app-submitted-posts [posts]='storedPosts'></app-submitted-posts>
+<div class="submissions">
+    <app-card-maker (postCreated)="onPostAdded($event)"></app-card-maker>
+    <app-submitted-posts [posts]='storedPosts'></app-submitted-posts>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Post } from 'src/app/services/model/post.model';
+
 
 @Component({
   selector: 'app-card-maker',
@@ -8,17 +10,17 @@ import { Post } from 'src/app/services/model/post.model';
 })
 export class CardMakerComponent implements OnInit {
 
-  enteredTitle = '';
-  enteredText = '';
-
   @Output() postCreated = new EventEmitter();
 
   constructor() { }
 
-  addPost() {
+  addPost(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
     const post: Post = {
-      title: this.enteredTitle,
-      content: this.enteredText
+      title: form.value.title,
+      content: form.value.content
     };
     this.postCreated.emit(post);
   }

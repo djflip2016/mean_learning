@@ -1,3 +1,6 @@
+<div *ngIf="posts.length < 1">
+    <span>No Current Posts</span>
+</div>
 <mat-card *ngFor="let cards of posts">
     <mat-card-header>
     <mat-card-title>
