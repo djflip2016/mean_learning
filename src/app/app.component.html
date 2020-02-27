@@ -1,0 +1,14 @@
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+      Sidenav content
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar fxLayout="row" color="primary" fxLayoutAlign="end center"> 
+        <span (click)="sidenav.toggle()">{{title}}</span>
+      </mat-toolbar>
+      <div class="container">
+          <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

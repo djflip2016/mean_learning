@@ -1,0 +1,10 @@
+<div>
+    <mat-form-field>
+        <input matInput color="primary" placeholder="name" [(ngModel)]="enteredTitle">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+        <textarea matInput color="primary" rows="6" placeholder="What would you like to post?" [(ngModel)]="enteredText"></textarea>
+    </mat-form-field>
+    <button mat-button color="primary" (click)="addPost()">Submit</button>
+</div>

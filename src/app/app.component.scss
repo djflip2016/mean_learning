@@ -1,0 +1,15 @@
+:host{
+    height: 100vh;
+    height: 100%;
+}
+
+mat-sidenav-container{
+    height: 100vh;
+    mat-toolbar{
+        margin-bottom: 16px;
+    };
+    .container{
+        width: 100%;
+        padding: 0 16px;
+    }
+}
