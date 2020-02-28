@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Material imports
 import { MatSidenavModule,
          MatInputModule,
          MatFormFieldModule,
@@ -16,6 +18,7 @@ import { MatSidenavModule,
 import { PostingComponent } from './posting/posting.component';
 import { SubmittedPostsComponent } from './posting/submitted-posts/submitted-posts.component';
 import { CardMakerComponent } from './posting/card-maker/card-maker.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { CardMakerComponent } from './posting/card-maker/card-maker.component';
     MatCardModule,
     MatDividerModule
   ],
-  providers: [    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

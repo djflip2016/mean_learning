@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { Post } from 'src/app/services/model/post.model';
+import { PostsService } from 'src/app/services/service/post.service';
 
 @Component({
   selector: 'app-submitted-posts',
@@ -9,10 +11,16 @@ import { Post } from 'src/app/services/model/post.model';
 })
 export class SubmittedPostsComponent implements OnInit {
 
-  @Input() posts: Post[] = [];
+  posts: Post[] = [];
 
-  constructor() { }
+  constructor(public postsService: PostsService) {}
+
+
   ngOnInit() {
+    this.posts = this.postsService.getPosts();
+    this.postsService.getUpdatedPost().subscribe( (posts: Post[]) => {
+      this.posts = posts;
+    });
   }
 
 }
