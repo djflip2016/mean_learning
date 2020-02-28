@@ -18,8 +18,8 @@ export class PostsService {
 
  addPost(title: string, content: string) {
     const post: Post = {
-        title: title,
-        content: content
+        title,
+        content
     };
     this.posts.push(post);
     this.postsUpdate.next([...this.posts]);

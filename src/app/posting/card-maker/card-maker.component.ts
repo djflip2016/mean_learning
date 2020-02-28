@@ -20,6 +20,7 @@ export class CardMakerComponent implements OnInit {
       return;
     }
     this.postsService.addPost(form.value.title, form.value.content);
+    form.resetForm();
   }
 
   ngOnInit() {
