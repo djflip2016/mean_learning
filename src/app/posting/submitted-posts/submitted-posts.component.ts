@@ -18,7 +18,7 @@ export class SubmittedPostsComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts();
     this.postsService.getUpdatedPost().subscribe( (posts: Post[]) => {
       this.posts = posts;
     });

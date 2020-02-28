@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
-//Material imports
+// Material imports
 import { MatSidenavModule,
          MatInputModule,
          MatFormFieldModule,
@@ -38,7 +39,8 @@ import { CardMakerComponent } from './posting/card-maker/card-maker.component';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }
