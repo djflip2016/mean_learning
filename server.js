@@ -1,3 +1,7 @@
+// To host on local use the following command in the command line****
+// open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+
+
 const http = require("http");
 const debug = require("debug")("node-angular");
 const app = require("../practice-server/app");
